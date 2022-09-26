@@ -5,6 +5,27 @@ class Aluno:
         self.curso = curso
         self.senha = senha
         
+    def alterar_senha(self, senha_antiga, senha_nova ):
+        if self.senha == senha_antiga:
+            self.senha = senha_nova
+            return True
+        else:
+            return False
+
+    def alterar_nome(self, nome_antigo, nome_novo ):
+        if self.nome == nome_antigo:
+            self.nome = nome_novo
+            return True
+        else:
+            return False
+
+    def alterar_curso(self, curso_antigo, curso_novo):
+        if self.curso == curso_antigo:
+            self.curso = curso_novo
+            return True
+        else:
+            return False
+        
 class Interface:
 
     alunos = []
