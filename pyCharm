@@ -38,3 +38,43 @@ class Interface:
 
         self.alunos.append(Aluno(nome, curso, senha))
         print('Aluno adicionado!')
+        
+    def alterar_senha(self):
+        numero_aluno = input('Qual é o número de listagem do aluno?')
+        numero_aluno = int(numero_aluno)
+
+        senha_antiga = input('Senha atual:\n')
+        senha_nova = input('Nova senha:\n')
+        sucesso = self.alunos[numero_aluno].alterar_senha(senha_antiga, senha_nova)
+
+        if sucesso:
+            print('Alteração realizada!')
+        else:
+            print('Erro ao tentar alterar senha!')
+
+    def alterar_nome(self):
+            numero_aluno = input('Qual é o número de listagem do aluno?')
+            numero_aluno = int(numero_aluno)
+
+            nome_antigo = input('Nome atual:\n')
+            nome_novo = input('Novo nome:\n')
+            sucesso = self.alunos[numero_aluno].alterar_nome(nome_antigo, nome_novo)
+
+            if sucesso:
+                print('Alteração realizada!')
+            else:
+                print('Erro ao tentar alterar nome de aluno!')
+
+    def alterar_curso(self):
+            numero_aluno = input('Qual é o número de listagem do aluno?')
+            numero_aluno = int(numero_aluno)
+
+            curso_antigo = input('Nome do curso:\n')
+            curso_novo = input('Novo curso desejado:\n')
+            sucesso = self.alunos[numero_aluno].alterar_curso(curso_antigo, curso_novo)
+
+            if sucesso:
+                    print('Alteração realizada!')
+            else:
+                    print('Erro ao tentar alterar curso!')
+        
