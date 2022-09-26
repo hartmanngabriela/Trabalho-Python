@@ -5,7 +5,7 @@ class Aluno:
         self.curso = curso
         self.senha = senha
         
-        class Interface:
+class Interface:
 
     alunos = []
     remove = []
