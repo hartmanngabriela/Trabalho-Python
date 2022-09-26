@@ -1,0 +1,19 @@
+class Aluno:
+
+    def __init__(self, nome, curso, senha):
+        self.nome = nome
+        self.curso = curso
+        self.senha = senha
+        
+        class Interface:
+
+    alunos = []
+    remove = []
+
+    def cadastrar_aluno(self):
+        nome = input('Qual é o nome do aluno?\n')
+        curso = input('Qual é o curso do aluno?\n')
+        senha = input('Nova senha:\n')
+
+        self.alunos.append(Aluno(nome, curso, senha))
+        print('Aluno adicionado!')
