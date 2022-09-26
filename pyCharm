@@ -30,7 +30,11 @@ class Interface:
 
     alunos = []
     remove = []
-
+    
+    def listar_alunos(self):
+        for i, aluno in enumerate(self.alunos):
+            print(i, aluno.nome, aluno.curso)
+    
     def cadastrar_aluno(self):
         nome = input('Qual é o nome do aluno?\n')
         curso = input('Qual é o curso do aluno?\n')
@@ -78,3 +82,37 @@ class Interface:
             else:
                     print('Erro ao tentar alterar curso!')
         
+    def excluir_aluno(self):
+        numero_aluno = input('Qual é o número de listagem do aluno?')
+        numero_aluno = int(numero_aluno)
+        sucesso= self.alunos.remove[numero_aluno]
+
+        if sucesso:
+            print('Aluno removido!')
+        else:
+            print('Erro ao tentar remover aluno!')
+
+    def loop(self):
+        while True:
+            cmd = input('Bem Vindo ao Sistema de Alunos\n1 - Listar alunos\n2 - Cadastrar aluno\n'
+                        '3 - Alterar nome\n4 - Alterar curso\n5 - Alterar senha\n6 - Remover aluno\n')
+            if cmd == '1':
+                self.listar_alunos()
+            elif cmd == '2':
+                self.cadastrar_aluno()
+            elif cmd == '3':
+                self.alterar_nome()
+            elif cmd == '4':
+                self.alterar_curso()
+            elif cmd == '5':
+                self.alterar_senha()
+            elif cmd == '6':
+                self.excluir_aluno()
+            else:
+                print('Não entendi!')
+                continue
+
+
+if __name__ == '__main__':
+    interface = Interface()
+    interface.loop()
